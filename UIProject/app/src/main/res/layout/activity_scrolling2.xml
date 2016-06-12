@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context="fixinnov.com.uiproject.ScrollingActivity2">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
+
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tabs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--app:tabMode="fixed"-->
+        <!--app:tabGravity="fill"-->
+        <!--android:fadeScrollbars="false"-->
+
+
+
+        <!-->-->
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="Tab1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="Tab2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="Tab3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+
+
+
+    <!--</android.support.design.widget.TabLayout>-->
+
+
+
+    <!--<include layout="@layout/listview_layout"-->
+        <!--/>-->
+<LinearLayout
+    android:id="@+id/horizontalButton"
+    android:layout_below="@+id/app_bar"
+    android:weightSum="3"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:text="42\nViews"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_weight="1"
+        android:text="234\nLikes"
+        android:layout_width="0dp"
+
+        android:layout_below="@+id/app_bar"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+    <Button
+        android:id="@+id/button3"
+        android:layout_weight="1"
+        android:text="456\nfollowers"
+        android:layout_width="0dp"
+
+        android:layout_below="@+id/app_bar"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+</LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+       android:layout_below="@+id/horizontalButton"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+</RelativeLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@android:drawable/ic_dialog_email"-->
+        <!--app:layout_anchor="@id/app_bar"-->
+        <!--app:layout_anchorGravity="bottom|end" />-->
+
+</android.support.design.widget.CoordinatorLayout>
